@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*
+*::after
+*::before
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+    box-sizing border-box
+    font-family 'Open Sans', sans-serif
+
+body
+    margin 0
+    padding 0
+
+section
+    width 100%
+    margin auto
+
+.active
+    border-bottom 3px solid #e2632e
+    font-weight bold
+
+// Header Styles
+.header
+    height 8vh
+    display flex
+    justify-content flex-start
+    align-items center
+    margin auto
+
+    background-color #24292f
+
+.header__logo
+    margin-left 7%
+    height 100%
+    display flex
+    align-items center
+
+.header__text
+    color white
+    font-size 1em
+    margin-left 2%
+    display flex
+    align-items center
+    height 100%
+
+    p 
+        padding 0
+        margin 0
+
+// Section Infos Styles
+.section__infos_container
+    margin auto
+    display flex
+    align-items center
+    justify-content flex-start
+    padding 1.3em
+
+.section__infos_img img
+    width 75px
+    height 75px
+    border-radius 50%
+
+.section__infos_text
+    margin-left 5%
+    display flex
+    flex-direction column
+    justify-content center
+    font-family 'Open Sans', sans-serif
+
+    p
+        margin 0
+        padding 0
+        color #272b31
+        font-size 1.2em
+        font-weight bold
+
+    span
+        color #999999
+        font-size 0.8em
+
+// Section Navigate Repos
+
+.section__navigate
+    display flex
+    margin auto
+    justify-content flex-start
+    align-items center
+
+.section__navigate_item
+    width 100%
+    height 100%
+    display flex
+    justify-content center
+    align-items center
+    padding 5px
+
+    &:hover
+        border-bottom 3px solid #e2632e
+        font-weight bold
+        cursor pointer
+
+.section__navigate_item-count
+    background-color #e0e1e1
+    margin-left 5px
+    width 25px
+    height 18px
+    border-radius 40%
+
+    font-size 12px
+
+    display flex
+    justify-content center
+    align-items center
+
+// Starred Repos component
+.search__input
+    width 100%
+    display flex
+    align-items center
+    justify-content center
+
+    padding 20px
+
+    input[type=search]
+        background left 40% / 25% 60% no-repeat url('../assets/icons/lupa-icon.svg')
+        padding 1em
+        padding-left 3.5em
+        border 1px solid #999999
+        border-radius 8px
+        height 3em
+
+        &:focus
+            outline none
+
+// InfoCard component
+
+.cardlist__container
+    width 100%
+    height 100%
+    padding 1em
+    border-bottom 1px solid #999999
+
+.cardlist__infos
+    display flex
+    flex-direction column
+    align-items flex-start
+    justify-content center
+    padding-left 5%
+
+
+.cardlist__infos_name
+    font-size 1.2em
+    color #3699db
+
+.cardlist__infos_description
+    color #999999
+    margin-top 0.5em
+
+.cardlist__infos_evaluation
+    display flex
+    flex-direction row
+    align-items flex-start
+    justify-content center
+
+    margin-top 0.5em
+
+.cardlist__infos_evaluation--item
+
+    margin-right 1em
+    display flex
+    align-items center
+    color #999999
+
+    img
+        padding 0.3em
+
+.list__container
+    border-top 1px solid #999999
+
+
+
+
+@media only screen and (min-width: 600px)
+
+    .main__container
+        display flex
+        position relative
+
+    //section infos
+    .section__infos
+        width 20%
+        max-height 30%
+        position absolute
+        top 0
+        left 0
+
+    .section__infos_container
+        display flex
+        flex-direction column
+
+    .section__infos_img img
+        width 8em
+        height 8em
+        margin-left 1em
+
+    .section__infos_text
+        text-align center  
+
+    //section content
+    .section__content
+        display flex
+        flex-direction column
+        margin-top 25px
+
+        width 100%
+        margin-left 23%
+
+    //section navigate
+    .section__navigate
+        margin-left 0
+
+    .search__input
+        display block
+        padding-left 0
+        
+    .cardlist__container
+        padding-left 0
+    .cardlist__infos
+        max-width 600px
+        padding-left 0
+    
